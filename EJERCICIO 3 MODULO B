@@ -1,0 +1,33 @@
+Algoritmo MONITOREODEBANDA
+	Definir peso Como Real
+	Definir aceptadas, rechazadas, total, opcion Como Entero
+	
+	aceptadas = 0
+	rechazadas = 0
+	
+	Hacer
+		Escribir "Ingrese peso de la pieza (g):"
+		Leer peso
+		
+		Si peso >= 45 Y peso <= 55 Entonces
+			Escribir "Pieza: Aceptada"
+			aceptadas = aceptadas + 1
+		Sino
+			Escribir "Pieza: Rechazada"
+			rechazadas = rechazadas + 1
+		FinSi
+		
+		Escribir "¿Desea procesar otra pieza? (1=Si / 0=No):"
+		Leer opcion
+		
+	Hasta Que opcion = 0
+	
+	total = aceptadas + rechazadas
+	
+	
+	Escribir "Total de piezas procesadas: ", total
+	Escribir "Piezas aceptadas: ", aceptadas
+	Escribir "Piezas rechazadas: ", rechazadas
+	
+FinAlgoritmo
+
