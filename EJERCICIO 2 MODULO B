@@ -1,0 +1,25 @@
+Algoritmo CONTROLDEACCESOPORSEGURIDAD
+	
+		Definir claveCorrecta, claveIngresada, intentos Como Entero
+		claveCorrecta = 1234
+		intentos = 0
+		
+		Hacer
+			Escribir "Ingrese clave de 4 digitos:"
+			Leer claveIngresada
+			intentos = intentos + 1
+			
+			Si claveIngresada = claveCorrecta Entonces
+				Escribir "Acceso Concedido. Inicializando rutina del brazo robótico"
+			Sino
+				Escribir "Clave incorrecta"
+			FinSi
+			
+		Hasta Que claveIngresada = claveCorrecta O intentos = 3
+		
+		Si claveIngresada <> claveCorrecta Entonces
+			Escribir "ALERTA: Numero maximo de intentos alcanzado. SISTEMA BLOQUEADO"
+		FinSi
+
+FinAlgoritmo
+		
