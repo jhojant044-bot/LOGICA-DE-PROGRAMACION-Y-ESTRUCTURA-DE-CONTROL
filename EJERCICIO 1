@@ -1,0 +1,30 @@
+Algoritmo SISTEMADEFACTURACION
+	
+		Definir precio, cantidad, subtotal, acumulador, iva, total Como Real
+		acumulador = 0
+		
+		Hacer
+			Escribir "Ingrese precio (0 para salir):"
+			Leer precio
+			
+			Si precio <> 0 Entonces
+				Escribir "Ingrese cantidad:"
+				Leer cantidad
+				
+				subtotal = precio * cantidad
+				//si el subtotaL es mayor a 100000, le aplica el 10% de descuento Si subtotAl > 100000 Entonces subtotaL = subtotaL * 0.90
+				Si subtotal > 100000 Entonces
+					subtotal = subtotal * 0.90
+				FinSi
+				
+				acumulador = acumulador + subtotal
+			FinSi
+		Hasta Que precio = 0
+		
+		iva = acumulador * 0.19
+		total = acumulador + iva
+		
+		Escribir "Subtotal: $", acumulador
+		Escribir "IVA 19%: $", iva
+		Escribir "Total a pagar: $", total
+FinAlgoritmo
