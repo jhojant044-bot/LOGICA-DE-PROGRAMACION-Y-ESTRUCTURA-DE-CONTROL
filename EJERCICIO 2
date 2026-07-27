@@ -1,0 +1,42 @@
+Algoritmo Procesadorestadistico
+	Definir nota, suma, promedio Como Real
+	Definir aprobados, reprobados, total, opcion Como Entero
+	
+	aprobados = 0
+	reprobados = 0
+	suma = 0
+	
+	Hacer
+		Escribir "Ingrese nota (0.0 a 5.0):"
+		Leer nota
+		
+		Si nota < 0.0 O nota > 5.0 Entonces
+			Escribir "Error:  fuera del rango"
+		Sino
+			suma = suma + nota
+			
+			Si nota >= 3.0 Entonces
+				aprobados = aprobados + 1
+			Sino
+				reprobados = reprobados + 1
+			FinSi
+			
+			Escribir "¿Desea ingresar otra nota? (1=Si / 0=No):"
+			
+			Leer opcion
+		FinSi
+		
+	Hasta Que opcion = 0
+	
+	total = aprobados + reprobados
+	
+	Si total > 0 Entonces
+		promedio = suma / total
+		Escribir "Total estudiantes: ", total
+		Escribir "Aprobados: ", aprobados
+		Escribir "Reprobados: ", reprobados
+		Escribir "Porcentaje aprobados: ", (aprobados / total) * 100, "%"
+		Escribir "Promedio grupo: ", promedio
+	FinSi
+FinAlgoritmo
+	
