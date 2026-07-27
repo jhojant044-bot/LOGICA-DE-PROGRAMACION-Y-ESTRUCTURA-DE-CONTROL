@@ -1,0 +1,27 @@
+Algoritmo controldeinventarios
+	
+		Definir stock, retiro Como Entero
+		
+		Escribir "Ingrese stock inicial:"
+		Leer stock
+		
+		Hacer
+			Escribir "Stock disponible: ", stock
+			Escribir "Cantidad a retirar (0 para salir):"
+			Leer retiro
+			
+			Si retiro > 0 Entonces
+				Si retiro > stock Entonces
+					Escribir "Stock insuficiente. Disponible: ", stock, " unidades."
+				Sino
+					stock = stock - retiro
+					Escribir "Nuevo saldo: ", stock, " unidades."
+				FinSi
+			
+			FinSi
+			
+		Hasta Que stock = 0 O retiro = 0
+		
+		Escribir "Proceso finalizado. Stock final: ", stock
+
+FinAlgoritmo
