@@ -1,0 +1,27 @@
+Algoritmo SISTEMADELLENADO
+	
+		Definir nivel, flujo Como Real
+		
+		Escribir "Ingrese nivel inicial del tanque (L):"
+		Leer nivel
+		
+		Si nivel >= 100 Entonces
+			Escribir "¡TANQUE LLENO! Desconectando bomba"
+			Escribir "Nivel final alcanzado: ", nivel, " Litros."
+		Sino
+			Hacer
+				Escribir "Ingrese litros de agua (flujo):"
+				Leer flujo
+				
+				Si flujo > 0 Entonces
+					nivel = nivel + flujo
+					Escribir "Nivel actual del tanque: ", nivel, " Litros."
+				FinSi
+				
+			Hasta Que nivel >= 100
+			
+			Escribir "¡TANQUE LLENO! Desconectando bomba"
+			Escribir "Nivel final alcanzado: ", nivel, " Litros."
+		FinSi
+FinAlgoritmo
+		
